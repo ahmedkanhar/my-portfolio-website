@@ -1,0 +1,647 @@
+@import url('http://fonts.googleapis.com/css2?family=poppins:wght@300,400,500,600,700,800,900&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+border: none;
+outline: none;
+scroll-behavior: smooth;
+font-family: 'poppins' , sans-serif;
+}
+
+:root {
+    --bg-color : #081b29;
+    --second-color : #112e42;
+    --text-color : #ededed;
+    --main-color: #00abf0;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body {
+
+background: var(--bg-color);
+color: var(--text-color);
+
+}
+
+.header {
+    position: fixed;
+    top : 0;
+    left : 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+.navbar a {
+font-size: 1.5rem;
+color:var(--text-color);
+text-decoration: none;
+font-weight: 500;
+margin-left: 3.5rem;
+transition: .3s;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards; 
+    animation-delay: 0.4s; 
+}
+
+.navbar a:hover,
+.navbar.active {
+    color : #00abf0;
+
+}
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+
+}
+ section {
+    min-height: 100hv;
+    padding: 10rem 9% 2rem;   
+ }
+
+.home {
+    height: 100vh;
+    background-color: #081b29;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+.home-content {
+    max-width: 60rem;
+}
+.home-content h1 {
+    position: relative;
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content .text-animate {
+    position: relative;
+    width: 32.8rem;
+}
+.home-content .text-animate h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 0.7px #00abf0;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards; 
+    animation-delay: 0.4s; 
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards; /* Corrected to showRight */
+    animation-delay: 0.4s; /* Simplified delay value */
+}
+
+.home-content p {
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards; 
+    animation-delay: 0.4s; 
+    z-index: 100;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards; 
+    animation-delay: 0.4s; 
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 80%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    background: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+/* Define color variables for easy adjustments */
+:root {
+    --main-color: #007bff; /* Primary color for icons and hover effect */
+}
+
+/* Container for social media icons */
+.home-sci {
+    position: absolute;
+    bottom: 4rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center icons vertically */
+}
+
+/* Background animation */
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29; 
+    animation: showRight 1s ease forwards; 
+    animation-delay: 0.4s; 
+    z-index: 0; 
+}
+
+/* Icon links */
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color); 
+    border-radius: 50%; 
+    font-size: 20px; 
+    color: var(--main-color); 
+    text-decoration: none; 
+    z-index: 1; 
+    overflow: hidden;
+    transition: .5s; 
+}
+
+/* Icon hover effect */
+.home-sci a:hover {
+    color: var(--bg-color); 
+}
+
+/* Hover effect background */
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color); /* Hover background color */
+    z-index: -1; /* Ensure it's behind the icon */
+    transition: .5s; /* Smooth transition */
+}
+
+/* Full background effect on hover */
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+
+span {
+    color: #00abf0;
+ }
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-color);
+    padding-bottom: 6rem;
+    transition: .3s;
+
+}
+.about ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--second-color);
+    animation: showRight 1s ease forwards; 
+    animation-delay: 0.4s; 
+}
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-img {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color)
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)rotate(0);
+    width: 115%;
+    height: 115%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-color);
+    border-bottom: .2rem solid var(--second-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+
+}
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn-box.btns a::before {
+    background: var(--second-color);
+} 
+
+
+
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Education section styles */
+.education {
+    height: 100vh;
+    background-color: var(--bg-color); 
+    padding: 50px 0;
+}
+
+.education .heading {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.education-row {
+    display: flex;
+    justify-content: center;
+}
+
+.education-column {
+    margin: 0 40px;
+    padding: 40px;
+    background-color: var(--second-color); /* Blue background for each column */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    color: #fff; /* White text color */
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.education-content {
+    margin-bottom: 20px;
+}
+
+.year {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Styling for the calendar icon */
+.year i {
+    margin-right: 5px;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.skills {
+   height: 100vh;
+   width: 100%;
+   padding: 10rem 0; /* Adjust padding as needed */
+   background-color: var(--second-color);
+    padding: 10rem 9% 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .skills-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skills {
+    padding: 10rem 9% 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .skills-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skills {
+    padding: 10rem 9% 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .heading {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skill-box {
+    width: 30%;
+    background-color: var(--second-color);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+}
+
+.skill-box h3 {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.skill-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-box ul li {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.skill-box ul li::before {
+    content: "\2022"; /* Bullet point */
+    color: var(--main-color);
+    font-size: 1.4rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem 9% 2rem; /* Adjust padding as needed */
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 45%; /* Adjust width as needed */
+    padding: 0 20px; /* Add padding to match styling */
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color); /* Use text color from root */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color); /* Use text color from root */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--second-color); /* Use secondary color from root */
+    border-radius: 5px;
+    background-color: var(--bg-color); /* Use background color from root */
+    color: var(--text-color); /* Use text color from root */
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: var(--second-color); /* Use secondary color from root */
+    color: var(--text-color); /* Use text color from root */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--main-color); /* Darken color on hover */
+}
+
+.contact .contact-info {
+    flex: 1;
+    max-width: 45%; /* Adjust width as needed */
+    padding: 0 20px; /* Add padding to match styling */
+}
+
+.contact .contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.contact .contact-info p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+
+
+
+@keyframes showRight { 
+    100% {
+        width: 0;
+    }
+}
+
